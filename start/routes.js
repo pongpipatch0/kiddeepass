@@ -15,6 +15,13 @@
 
 const Route = use('Route')
 
-Route.on('/').render('pages.home' ,{
+Route.on('/').render('pages.home', {
   title: 'Kiddeepass'
+})
+
+Route.on('/home').render('pages.home', {
+  title : 'Kiddeepass'
+})
+Route.on('/activities').render('pages.activities',{
+  title : 'Activities'
 })

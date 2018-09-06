@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="{{ assetsUrl('assets/build/images/default/logo.webp') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    {{--
-      {{ css('assets/semantic-ui/semantic.min.css') }}
-      {{ css('assets/build/css/kiddeepass.min.css') }}
-    --}}
+    {{ css('assets/build/css/kiddeepass.min.css') }}
+    {{ css('assets/semantic-ui/semantic.min.css') }}
     <title>{{ title }}</title>
   </head>
   <body>
     @include('components.nav')
 
-    @!section('content')
-
-    {{--
-      {{ script('assets/build/js/jquery-3.3.1.slim.min.js') }}
-      {{ script('assets/semantic-ui/semantic.min.js') }}
-      {{ script('assets/build/js/kiddeepass.min.js') }}
-    --}}
+    <div class="ui container" style="margin-top: 6em;">
+      @!section('content')
+    </div>
+    
+    {{ script('assets/build/js/jquery-3.3.1.slim.min.js') }}
+    {{ script('assets/semantic-ui/semantic.min.js') }}
+    {{ script('assets/build/js/kiddeepass.min.js') }}
   </body>
 </html>
