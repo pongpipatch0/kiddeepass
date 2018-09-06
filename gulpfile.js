@@ -19,8 +19,8 @@ const paths = {
 
 gulp.task('js', function() {
   const streamOne = gulp.src([
-    // paths.devPath + 'js/*.js',
-    // paths.semanticPath + 'semantic.min.js'
+    paths.devPath + 'js/*.js',
+    paths.semanticPath + 'semantic.min.js',
     paths.devPath + 'js/turbolinks.js'
   ])
   .pipe(
@@ -32,13 +32,13 @@ gulp.task('js', function() {
   return merge(streamOne)
   .pipe(concat('kiddeepass.min.js'))
   .pipe(gulp.dest(paths.assetsPath + 'js/'))
+
 })
 
 
 gulp.task('style', function() {
   return gulp.src([
-    paths.devPath + 'less/*.less',
-    paths.semanticPath + 'semantic.min.css'
+    paths.devPath + 'less/*.less'
   ])
   .pipe(sourcemaps.init())
   .pipe(
@@ -47,12 +47,6 @@ gulp.task('style', function() {
     })
   )
   .pipe(minifyCSS())
-  .pipe(
-    autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    })
-  )
   .pipe(concat('kiddeepass.min.css'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(paths.assetsPath + 'css/'))
@@ -61,9 +55,9 @@ gulp.task('style', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.devPath + 'less/*.less',['style'])
-  gulp.watch(paths.devPath + 'js/*.js',['js'])
+  // gulp.watch(paths.devPath + 'js/*.js',['js'])
 })
 
 gulp.task('default',[
-  'watch','style','js'
+  'watch','style'
 ])

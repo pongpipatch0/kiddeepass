@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
+    {{ css('assets/semantic-ui/semantic.min.css') }}
     {{ css('assets/build/css/kiddeepass.min.css') }}
     <title>{{ title }}</title>
   </head>
@@ -15,6 +16,8 @@
     @!section('content')
 
     <!-- JavaScript -->
+    {{ script('assets/build/js/jquery-3.3.1.slim.min.js') }}
+    {{ script('assets/semantic-ui/semantic.min.js') }}
     {{ script('assets/build/js/kiddeepass.min.js') }}
   </body>
 </html>
