@@ -15,4 +15,6 @@
 
 const Route = use('Route')
 
-Route.on('/').render('pages.home')
+Route.on('/').render('pages.home' ,{
+  title: 'Kiddeepass'
+})
