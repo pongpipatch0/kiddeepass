@@ -1,0 +1,23 @@
+.main {
+  height: 85%;
+  margin-top: 6em;
+}
+
+.ui.banner.segment {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/default/banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.masthead h1.ui.header {
+  margin-top: 30%;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.form-input-search {
+  padding: 10px;
+  background-color: #00000052;
+  border-radius: 10px;
+}

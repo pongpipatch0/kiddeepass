@@ -4,19 +4,20 @@
     <link rel="icon" type="image/png" href="{{ assetsUrl('assets/build/images/default/logo.webp') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{ css('assets/build/css/kiddeepass.min.css') }}
-    {{ css('assets/semantic-ui/semantic.min.css') }}
+    {{ style('assets/semantic-ui/semantic.min.css') }}
+    {{ style('assets/build/css/kiddeepass.min.css') }}
     <title>{{ title }}</title>
   </head>
   <body>
     @include('components.nav')
 
-    <div class="ui container" style="margin-top: 6em;">
+    <div class="main">
       @!section('content')
     </div>
-    
+    {{--
     {{ script('assets/build/js/jquery-3.3.1.slim.min.js') }}
     {{ script('assets/semantic-ui/semantic.min.js') }}
     {{ script('assets/build/js/kiddeepass.min.js') }}
+    --}}
   </body>
 </html>
